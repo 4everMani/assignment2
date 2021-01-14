@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <app-users></app-users>
+    
+    <table class="table table-dark" *ngIf="users.length>0">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users ;let i = index">
+          <th scope="row">{{i}}</th>
+          <td >{{user.name}}</td>
+          <td appHighlight>{{user.email}}</td>
+          <td>{{user.username}}</td>
+          <td><button type="button" class="btn btn-danger" (click)="onDelete(i)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template [ngIf]="users.length==0">
+      <p>No Users Available, Please add one!</p>
+    </ng-template> 
+  </body>
+</html>
+
