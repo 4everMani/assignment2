@@ -4,11 +4,12 @@
 </h1>
 
 <div>
-  <form action="">
-    <input type="text" name="name" class="formStyle"  placeholder="Name" required  #name/>
-    <input type="email" name="email" class="formStyle" placeholder="Email" required #email/>
-    <input type="username" name="username" class="formStyle" placeholder="username" required #username/>
+  <form action="#">
+    <input id="2" type="text" name="name" class="formStyle"  placeholder="Name (required)"    required #name/>
+    <input type="email" name="email" class="formStyle" placeholder="Email (required)" required #email/>
+    <input type="username" name="username" class="formStyle" placeholder="Username (required)" required #username/>
     <input type="reset" class="formButton" (click)="onAddUser(name.value,email.value,username.value)" value="Add User">
+    <!-- <input type="reset" class="formButton" value="Clear"> -->
     <!-- <a href="#" class="formButton" (click)="onAddUser(name.value,email.value,username.value)">Add User</a> -->
   </form>
 </div>

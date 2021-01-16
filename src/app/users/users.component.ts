@@ -15,7 +15,15 @@ export class UsersComponent implements OnInit {
   }
 
   onAddUser(name:string,email:string,username:string){
-    this.userServices.addUser(name,email,username);
+    if(name.length>0 && email.length>0 && username.length>0){
+      this.userServices.addUser(name,email,username);
+      
+    }
+    else{
+      alert(`    Invalid input!
+    Please fill required field.`)
+    }
+    
     // document.getElementById('1').onreset()
   }
 
